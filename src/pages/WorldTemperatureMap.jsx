@@ -112,7 +112,7 @@ function WorldTemperatureMap() {
   }, []);
 
   return (
-	<div className='p-4'>
+	<div className='p-4 z-[1]'>
 	<h1 className="alien-title text-center font-extrabold text-3xl tracking-wider shadow-neon">
 		{countryName || 'Hover over a country'}
 	</h1>
