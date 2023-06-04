@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'AlienFont';
+    src: url('../fonts/TheCalling.ttf') format('truetype');
+  }
+  
+  .alien-title {
+    font-family: 'AlienFont', sans-serif;
+  }

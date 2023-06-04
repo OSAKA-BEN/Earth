@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 
 function WorldTemperatureMap() {
   const ref = useRef();
+  const [countryName, setCountryName] = React.useState("");
 
   useEffect(() => {
     const width = 800, height = 800;
@@ -28,15 +29,23 @@ function WorldTemperatureMap() {
         .attr("class", "graticule")
         .attr("d", path)
     
-    	d3.json("/world-countries.json").then(function(collection) {
-		var countries = svg.selectAll("path")
-			.data(collection.features)
-			.enter().append("a")
-			.attr("xlink:href", d => "https://www.google.com/search?q=" + d.properties.name)
-			.append("path")
-			.attr("d", path)
-			.attr("class", "country")
-			.attr("id", d => d.id)
+		d3.json("/world-countries.json").then(function(collection) {
+			var countries = svg.selectAll("path")
+				.data(collection.features)
+				.enter().append("a")
+				.attr("xlink:href", d => "https://www.google.com/search?q=" + d.properties.name)
+				.append("path")
+				.attr("d", path)
+				.attr("class", "country")
+				.attr("id", d => d.id)
+				.on("mouseover", function(event, d) {
+					d3.select(this).style("fill", "#9966cc");
+					setCountryName(d.properties.name);  // Update the state here
+				})
+				.on("mouseout", function(event, d) {
+					d3.select(this).style("fill", "");
+					setCountryName("");  // Clear the state here
+				});
 			
 		d3.csv("/world-temperature.csv").then(function(data) {
 			// 60 is the number of class in temperature.css
@@ -103,7 +112,11 @@ function WorldTemperatureMap() {
   }, []);
 
   return (
-    <svg ref={ref}></svg>
+	<>
+	<h1 style={{ color: countryName ? "white" : "transparent", textAlign: "center", fontSize: "40px" }}>{countryName || 'Hover over a country'}</h1>
+	<h2 className="alien-title">{countryName || 'Hover over a country'}</h2>
+	<svg ref={ref}></svg>
+  	</>
   );
 }
 
