@@ -112,11 +112,15 @@ function WorldTemperatureMap() {
   }, []);
 
   return (
-	<>
-	<h1 style={{ color: countryName ? "white" : "transparent", textAlign: "center", fontSize: "40px" }}>{countryName || 'Hover over a country'}</h1>
-	<h2 className="alien-title">{countryName || 'Hover over a country'}</h2>
+	<div className='p-4'>
+	<h1 className="alien-title text-center font-extrabold text-3xl tracking-wider shadow-neon">
+		{countryName || 'Hover over a country'}
+	</h1>
+	<h2 className="text-center text-2xl font-bold ">
+		{countryName || 'Hover over a country'}
+	</h2>
 	<svg ref={ref}></svg>
-  	</>
+	</div>
   );
 }
 
