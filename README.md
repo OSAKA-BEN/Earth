@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## World Temperature Map - A 3D Interactive Globe
 
 Welcome to the World Temperature Map project! This application is a 3D globe built using D3.js and Three.js libraries, providing an immersive and interactive experience as you float in a starry outer space. The project aims to present global temperatures with a unique and engaging approach.
