@@ -16,12 +16,27 @@ export default function Home() {
           </button>
         </div>
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <input
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered border-[#0ff] w-full max-w-xs bg-transparent"
+          />
+          <svg
+            className="input-icon w-6 h-6 text-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {/* Ajoutez le code de l'icône ici */}
+          </svg>
         </div>
         <div className="flex-none">
-          <button className="btn btn-square btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-          </button>
+          <div className="avatar m-2">
+            <div className="w-10 rounded-full ring ring-[#0ff] ring-offset-base-100 ring-offset-2">
+              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            </div>
+          </div>
         </div>
       </div>
 
