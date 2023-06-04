@@ -1,38 +1,27 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## World Temperature Map - A 3D Interactive Globe
 
-First, run the development server:
+Welcome to the World Temperature Map project! This application is a 3D globe built using D3.js and Three.js libraries, providing an immersive and interactive experience as you float in a starry outer space. The project aims to present global temperatures with a unique and engaging approach.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![Globe](/public/globe.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Our World Temperature Map is a globe representation where each country is distinguished by different colors correlating to its current temperature. The data visualization utilized here is a clear and intuitive way to comprehend temperature differences across the world. The 3D rendering of the globe is made possible with D3.js.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Clicking on any country redirects you to a Google search of the selected country. This provides quick access to a plethora of additional information, making it an effective educational tool.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The experience is augmented by the simulated outer space environment with stars, complete with a starry background created using the Three.js library. This library enables the creation of 3D animations directly in the browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Key Features
 
-## Learn More
+- Interactive 3D Globe: Visualize the world in a way flat maps can't match. Rotate and explore the globe with ease.
+- Temperature Visualization: Different colors represent the temperature of each country, providing an instant understanding of global temperature distribution.
+- Direct Google Search: A simple click on a country will take you to a Google search result page of that country, facilitating easy access to further information.
+- Immersive Background: With the use of Three.js, the application is set against a starry space backdrop to enhance the user experience.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is implemented using D3.js for data visualization and Three.js for 3D modeling and animation. It is fully web-based, requiring no additional software to run. The project takes advantage of modern web technologies and APIs to provide a smooth, interactive experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
